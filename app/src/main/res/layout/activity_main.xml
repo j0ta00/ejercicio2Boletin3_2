@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtNumb2"
+        android:layout_width="138dp"
+        android:layout_height="53dp"
+        android:digits="1,2,3,4,5,6,7,8,9,0,."
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259" />
+
+    <EditText
+        android:id="@+id/txtNumb1"
+        android:layout_width="138dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginBottom="23dp"
+        android:digits="1,2,3,4,5,6,7,8,9,0,."
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/rgOperations"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.259" />
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="="
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        app:layout_constraintStart_toStartOf="@+id/rgOperations"
+        app:layout_constraintTop_toBottomOf="@+id/rgOperations" />
+
+    <RadioGroup
+        android:id="@+id/rgOperations"
+        android:layout_width="194dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="37dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnResult"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumb2"
+        app:layout_constraintStart_toStartOf="@+id/txtNumb1"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumb1">
+
+        <RadioButton
+            android:id="@+id/rdBtnSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+
+        <RadioButton
+            android:id="@+id/rdBtnSubs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+
+        <RadioButton
+            android:id="@+id/rdBtnMult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*" />
+
+        <RadioButton
+            android:id="@+id/rdBtnDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="293dp"
+        android:text="The result is: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnResult"
+        app:layout_constraintTop_toBottomOf="@+id/btnResult" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
